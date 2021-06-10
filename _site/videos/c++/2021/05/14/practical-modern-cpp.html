@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Modern C++ 14/17 Visited | Just Some Random Notes</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Modern C++ 14/17 Visited" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="5 days ago" />
+<meta property="og:description" content="5 days ago" />
+<link rel="canonical" href="/videos/c++/2021/05/14/practical-modern-cpp.html" />
+<meta property="og:url" content="/videos/c++/2021/05/14/practical-modern-cpp.html" />
+<meta property="og:site_name" content="Just Some Random Notes" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-14T10:17:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Modern C++ 14/17 Visited" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/videos/c++/2021/05/14/practical-modern-cpp.html","headline":"Modern C++ 14/17 Visited","dateModified":"2021-05-14T10:17:00+02:00","datePublished":"2021-05-14T10:17:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"/videos/c++/2021/05/14/practical-modern-cpp.html"},"description":"5 days ago","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Just Some Random Notes" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Just Some Random Notes</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/%5C">Welcome to Jekyll!</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Modern C++ 14/17 Visited</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-05-14T10:17:00+02:00" itemprop="datePublished">May 14, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>5 days ago</p>
+
+<h1 id="how-to-adopt-modern-c-17">How to adopt Modern C++ 17</h1>
+<p>By Herb Sutter</p>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/UsrHQAzSXkA" frameborder="0" allowfullscreen=""></iframe></div>
+<p><br /></p>
+
+<h2 id="whats-new">What’s new</h2>
+<p>Several features that you can adopt when you are writing a new code:</p>
+<ul>
+  <li>Range</li>
+  <li><code class="language-plaintext highlighter-rouge">make_unique</code> or <code class="language-plaintext highlighter-rouge">make_shared</code></li>
+  <li><code class="language-plaintext highlighter-rouge">auto</code> type deduction</li>
+</ul>
+
+<p>06:50. Compute arithmetic mean using <code class="language-plaintext highlighter-rouge">reduce</code> combined with <code class="language-plaintext highlighter-rouge">par_unseq</code> to achieve parallel STL. It is comparable to python’s <code class="language-plaintext highlighter-rouge">sum</code>.</p>
+
+<p>08:51. Value types &amp; <code class="language-plaintext highlighter-rouge">move</code> efficiency. It is okay to return by value now in C++ 17 since C++ now has <code class="language-plaintext highlighter-rouge">move</code> operation.</p>
+
+<p>11:20. Four vocabulary types in C++17: <code class="language-plaintext highlighter-rouge">string_view</code>, <code class="language-plaintext highlighter-rouge">optional&lt;T&gt;</code>, <code class="language-plaintext highlighter-rouge">variant&lt;Ts...&gt;</code>, and <code class="language-plaintext highlighter-rouge">any</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">string_view</code> is a non-owning const view of a contiguous sequence of characters (NOT null-terminated).</p>
+
+<p><code class="language-plaintext highlighter-rouge">optional&lt;T&gt;</code> contains a T value or “empty”. Combined with <code class="language-plaintext highlighter-rouge">result.value_or()</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">variant&lt;Ts...&gt;</code>. Contains one value of a fixed set of types.</p>
+
+<p><code class="language-plaintext highlighter-rouge">any&lt;T&gt;</code> contains one value of any type, fully dynamic type.</p>
+
+<h2 id="top-two-general-issues-techniques">Top two general issues/ techniques</h2>
+
+<ul>
+  <li>
+    <p>RAII + scopes
+Scoped lifetime = efficient + exception-safe. Even if a class contains an object by value, it will be destructed at the end of the enclosing object’s lifetime.</p>
+  </li>
+  <li>
+    <p>Error handling
+Prefer exceptions. Use error codes on boundaries with non-C++ code. 
+Use assertion for non-recoverable bugs, so that developers can fix it during test time.</p>
+  </li>
+  <li>
+    <p>Smart Pointers
+As function parameter and return value, raw pointers and raw references are just fine.</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">widget</span><span class="o">&gt;</span> <span class="n">factory</span><span class="p">();</span>
+
+<span class="kt">void</span> <span class="nf">caller</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">auto</span> <span class="n">w</span> <span class="o">=</span> <span class="n">factory</span><span class="p">();</span>
+    <span class="k">auto</span> <span class="n">g</span> <span class="o">=</span> <span class="n">make_unique</span><span class="o">&lt;</span><span class="n">gadget</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">use</span><span class="p">(</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="o">*</span><span class="n">g</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Inner pointer and outer pointer share the same counter reference</span>
+<span class="k">struct</span> <span class="nc">Node</span> <span class="p">{</span> <span class="n">Data</span> <span class="n">data</span><span class="p">;</span> <span class="p">};</span>
+<span class="n">shared_prt</span><span class="o">&lt;</span><span class="n">Data</span><span class="o">&gt;</span> <span class="n">get_data</span><span class="p">(</span><span class="k">const</span> <span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;&amp;</span> <span class="n">pn</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="n">pn</span><span class="p">,</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">pn</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">)</span> <span class="p">};</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Be careful when you pass a shared_ptr by value because it can cause performance hits (i.e. hittung the cache lines.).</p>
+
+<p>Summary: 43:30.</p>
+
+<p><a href="https://youtu.be/UsrHQAzSXkA?t=251">How to adopt Modern C++17 Into Your C++ Code</a>.</p>
+
+
+  </div><a class="u-url" href="/videos/c++/2021/05/14/practical-modern-cpp.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Just Some Random Notes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Just Some Random Notes</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
